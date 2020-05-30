@@ -1,0 +1,21 @@
+#pragma once
+#include <cstring>
+#include <iostream>
+template <class T>
+class JSONObject{
+private:
+   char* key;
+   T value;
+public:
+   JSONObject();
+   JSONObject(const JSONObject& from);
+   JSONObject<T>& operator=(const JSONObject& from);
+   ~JSONObject();
+ 
+   void set_key(const char* key);
+   void set_value(T value);
+ 
+   const char* get_key() const;
+   T get_value() const;
+};
+ 
